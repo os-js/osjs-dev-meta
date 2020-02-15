@@ -15,6 +15,14 @@
 
 This package just contains dependencies used throughout codebase.
 
+## Contents
+
+* Webpack w/css, sass, babel, file-loader
+* Babel w/preset-env, transform-runtime
+* Eslint
+* Stylelint
+* OS.js official stylelint and eslint ruleset
+
 ## Contribution
 
 * **Become a [Patreon](https://www.patreon.com/user?u=2978551&ty=h&u=2978551)**
