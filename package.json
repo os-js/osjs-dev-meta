@@ -19,23 +19,23 @@
   },
   "homepage": "https://github.com/os-js/osjs-dev-meta#readme",
   "dependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-transform-runtime": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/runtime": "^7.9.2",
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/runtime": "^7.10.5",
     "@osjs/eslint-config": "^1.1.0",
     "@osjs/stylelint-config": "^1.0.1",
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^5.1.1",
-    "css-loader": "^3.5.2",
+    "css-loader": "^3.6.0",
     "eslint": "^6.8.0",
     "file-loader": "^5.1.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^8.0.2",
-    "stylelint": "^13.3.2",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.10"
+    "stylelint": "^13.6.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   }
 }
