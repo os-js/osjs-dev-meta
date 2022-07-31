@@ -20,6 +20,7 @@ This package contains dependencies used throughout codebase.
 * Eslint
 * Stylelint
 * OS.js official stylelint and eslint ruleset
+* Jest setup
 
 ## Contribution
 
