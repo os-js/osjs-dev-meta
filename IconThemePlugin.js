@@ -1,3 +1,5 @@
+const path = require('path');
+
 class IconThemePlugin {
   apply(compiler) {
     const pluginName = IconThemePlugin.name;
@@ -10,15 +12,17 @@ class IconThemePlugin {
       );
 
       const iconEntries = icons.map((file) => [
-        file.substr(0, file.lastIndexOf(".")),
-        file.substr(file.lastIndexOf(".") + 1, file.length)
+        file.substr(0, file.lastIndexOf('.')),
+        file.substr(file.lastIndexOf('.') + 1, file.length)
       ]);
-      const iconTypes = Object.fromEntries(iconEntries);
 
-      const metadata = require('./metadata.json');
-      metadata.icons = iconTypes;
+      const metadataFile = `${compiler.context}/metadata.json`;
+      const metadata = require(metadataFile);
+      metadata.icons = Object.fromEntries(iconEntries);
+
       const json = JSON.stringify(metadata, null, 2);
-      compilation.emitAsset('../metadata.json', new RawSource(json));
+      const relativePath = path.relative(compiler.outputPath, metadataFile);
+      compilation.emitAsset(relativePath, new RawSource(json));
     });
   }
 }
