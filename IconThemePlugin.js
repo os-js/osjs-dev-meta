@@ -7,8 +7,7 @@ class IconThemePlugin {
 
   apply(compiler) {
     const pluginName = IconThemePlugin.name;
-    const {webpack} = compiler;
-    const {RawSource} = webpack.sources;
+    const {webpack: {RawSource}} = compiler;
 
     compiler.hooks.emit.tap(pluginName, (compilation) => {
       const icons = compilation.getAssets().map(
@@ -22,14 +21,11 @@ class IconThemePlugin {
         file.substr(0, file.lastIndexOf('.')),
         file.substr(file.lastIndexOf('.') + 1, file.length)
       ]);
-
-      const sortedIcons = Object.fromEntries(
-        iconEntries.sort((a, b) => a[0].localeCompare(b[0]))
-      );
+      iconEntries.sort(([a], [b]) => a.localeCompare(b));
 
       const imageTypes = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp'];
       metadata.icons = Object.fromEntries(
-        Object.entries(sortedIcons).filter(
+        Object.entries(iconEntries).filter(
           ([key, value]) => imageTypes.includes(value)
         )
       );
