@@ -33,3 +33,17 @@ jobs:
           npm install
           npm install --install-links $GITHUB_WORKSPACE
           npm run build
+  distro:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '16'
+      - name: Build
+        run: |
+          git clone https://github.com/os-js/OS.js.git test
+          cd test
+          npm install
+          npm install --install-links $GITHUB_WORKSPACE
+          npm run build
