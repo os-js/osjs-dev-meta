@@ -2,6 +2,11 @@
   "name": "@osjs/dev-meta",
   "version": "2.3.1",
   "description": "OS.js Development Meta Package",
+  "files": [
+    "package.json",
+    "IconThemePlugin.js",
+    "README.md"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
