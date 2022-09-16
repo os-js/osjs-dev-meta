@@ -14,7 +14,7 @@ jobs:
           node-version: '16'
       - name: Build
         run: |
-          git clone https://github.com/os-js/osjs-example-application.git test
+          git clone --depth 1 https://github.com/os-js/osjs-example-application.git test
           cd test
           npm install
           npm install --install-links $GITHUB_WORKSPACE
@@ -28,7 +28,7 @@ jobs:
           node-version: '16'
       - name: Build
         run: |
-          git clone https://github.com/os-js/osjs-example-iframe-application.git test
+          git clone --depth 1 https://github.com/os-js/osjs-example-iframe-application.git test
           cd test
           npm install
           npm install --install-links $GITHUB_WORKSPACE
@@ -42,7 +42,7 @@ jobs:
           node-version: '16'
       - name: Build
         run: |
-          git clone https://github.com/os-js/OS.js.git test
+          git clone --depth 1 https://github.com/os-js/OS.js.git test
           cd test
           npm install
           npm install --install-links $GITHUB_WORKSPACE
