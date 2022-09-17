@@ -25,8 +25,8 @@ class IconThemePlugin {
 
       const imageTypes = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp'];
       metadata.icons = Object.fromEntries(
-        Object.entries(iconEntries).filter(
-          ([key, value]) => imageTypes.includes(value)
+        iconEntries.filter(
+          ([name, ext]) => imageTypes.includes(ext)
         )
       );
 
