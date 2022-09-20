@@ -1,6 +1,6 @@
 {
   "name": "@osjs/dev-meta",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "OS.js Development Meta Package",
   "files": [
     "package.json",
